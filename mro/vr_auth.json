@@ -1,0 +1,108 @@
+{
+    "schema": [
+        {
+            "table": "permissions",
+            "columns": [
+                {
+                    "field": "name",
+                    "type": "varchar(255)"
+                },
+                {
+                    "field": "description",
+                    "type": "varchar(255)"
+                },
+                {
+                    "field": "is_user_defined",
+                    "type": "tinyint(1)"
+                },
+                {
+                    "field": "created_at",
+                    "type": "datetime"
+                },
+                {
+                    "field": "updated_at",
+                    "type": "datetime"
+                }
+            ]
+        },
+        {
+            "table": "role_permissions",
+            "columns": [
+                {
+                    "field": "uuid",
+                    "type": "char(36)"
+                },
+                {
+                    "field": "created_at",
+                    "type": "datetime"
+                },
+                {
+                    "field": "updated_at",
+                    "type": "datetime"
+                },
+                {
+                    "field": "role_name",
+                    "type": "varchar(255)"
+                },
+                {
+                    "field": "permission_name",
+                    "type": "varchar(255)"
+                }
+            ]
+        },
+        {
+            "table": "roles",
+            "columns": [
+                {
+                    "field": "name",
+                    "type": "varchar(255)"
+                },
+                {
+                    "field": "description",
+                    "type": "varchar(255)"
+                },
+                {
+                    "field": "is_user_defined",
+                    "type": "tinyint(1)"
+                },
+                {
+                    "field": "created_at",
+                    "type": "datetime"
+                },
+                {
+                    "field": "updated_at",
+                    "type": "datetime"
+                }
+            ]
+        },
+        {
+            "table": "users",
+            "columns": [
+                {
+                    "field": "uuid",
+                    "type": "char(36)"
+                },
+                {
+                    "field": "email",
+                    "type": "varchar(255)"
+                },
+                {
+                    "field": "password",
+                    "type": "varchar(255)"
+                },
+                {
+                    "field": "created_at",
+                    "type": "datetime"
+                },
+                {
+                    "field": "updated_at",
+                    "type": "datetime"
+                },
+                {
+                    "field": "role_name",
+                    "type": "varchar(255)"
+                }
+            ]
+        }
+    ]
+}
